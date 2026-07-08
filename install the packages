@@ -1,0 +1,94 @@
+**install the packages**
+
+
+manthangavali1234@mg-vm-1:~/shellclass/03_loops$ cat install_packages.sh 
+#!/bin/bash
+
+#wrinting a script for a to install the packages
+
+for package in git curl vim wget
+do
+        echo "Installing $package"
+        sudo apt install -y "$package"
+
+        echo "$package installation is complted"
+done
+
+echo "All packages are processed"
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+manthangavali1234@mg-vm-1:~/shellclass/03_loops$ bash install_packages.sh 
+Installing git
+Installing:                     
+  git
+
+Installing dependencies:
+  git-man  libcurl3t64-gnutls  liberror-perl  libngtcp2-16  libngtcp2-crypto-gnutls8  patch
+
+Suggested packages:
+  git-doc  git-email  git-gui  gitk  gitweb  git-cvs  git-mediawiki  git-svn  ed  diffutils-doc
+
+Summary:
+  Upgrading: 0, Installing: 7, Removing: 0, Not Upgrading: 2
+  Download size: 11.8 MB
+  Space needed: 54.4 MB / 6913 MB available
+
+Get:1 file:/etc/apt/mirrors/debian.list Mirrorlist [30 B]
+Get:2 https://deb.debian.org/debian trixie/main amd64 libngtcp2-16 amd64 1.11.0-1+deb13u1 [132 kB]
+Get:3 https://deb.debian.org/debian trixie/main amd64 libngtcp2-crypto-gnutls8 amd64 1.11.0-1+deb13u1 [29.5 kB]
+Get:4 https://deb.debian.org/debian trixie/main amd64 libcurl3t64-gnutls amd64 8.14.1-2+deb13u3 [384 kB]
+Get:5 https://deb.debian.org/debian trixie/main amd64 liberror-perl all 0.17030-1 [26.9 kB]
+Get:6 https://deb.debian.org/debian trixie/main amd64 git-man all 1:2.47.3-0+deb13u1 [2205 kB]
+Get:7 https://deb.debian.org/debian trixie/main amd64 git amd64 1:2.47.3-0+deb13u1 [8862 kB]
+Get:8 https://deb.debian.org/debian trixie/main amd64 patch amd64 2.8-2 [134 kB]
+Fetched 11.8 MB in 0s (25.6 MB/s)
+Selecting previously unselected package libngtcp2-16:amd64.
+(Reading database ... 61736 files and directories currently installed.)
+Preparing to unpack .../0-libngtcp2-16_1.11.0-1+deb13u1_amd64.deb ...
+Unpacking libngtcp2-16:amd64 (1.11.0-1+deb13u1) ...
+Selecting previously unselected package libngtcp2-crypto-gnutls8:amd64.
+Preparing to unpack .../1-libngtcp2-crypto-gnutls8_1.11.0-1+deb13u1_amd64.deb ...
+Unpacking libngtcp2-crypto-gnutls8:amd64 (1.11.0-1+deb13u1) ...
+Selecting previously unselected package libcurl3t64-gnutls:amd64.
+Preparing to unpack .../2-libcurl3t64-gnutls_8.14.1-2+deb13u3_amd64.deb ...
+Unpacking libcurl3t64-gnutls:amd64 (8.14.1-2+deb13u3) ...
+Selecting previously unselected package liberror-perl.
+Preparing to unpack .../3-liberror-perl_0.17030-1_all.deb ...
+Unpacking liberror-perl (0.17030-1) ...
+Selecting previously unselected package git-man.
+Preparing to unpack .../4-git-man_1%3a2.47.3-0+deb13u1_all.deb ...
+Unpacking git-man (1:2.47.3-0+deb13u1) ...
+Selecting previously unselected package git.
+Preparing to unpack .../5-git_1%3a2.47.3-0+deb13u1_amd64.deb ...
+Unpacking git (1:2.47.3-0+deb13u1) ...
+Selecting previously unselected package patch.
+Preparing to unpack .../6-patch_2.8-2_amd64.deb ...
+Unpacking patch (2.8-2) ...
+Setting up liberror-perl (0.17030-1) ...
+Setting up patch (2.8-2) ...
+Setting up git-man (1:2.47.3-0+deb13u1) ...
+Setting up libngtcp2-16:amd64 (1.11.0-1+deb13u1) ...
+Setting up libngtcp2-crypto-gnutls8:amd64 (1.11.0-1+deb13u1) ...
+Setting up libcurl3t64-gnutls:amd64 (8.14.1-2+deb13u3) ...
+Setting up git (1:2.47.3-0+deb13u1) ...
+Processing triggers for man-db (2.13.1-1) ...
+Processing triggers for libc-bin (2.41-12+deb13u3) ...
+git installation is complted
+Installing curl
+curl is already the newest version (8.14.1-2+deb13u3).
+Summary:
+  Upgrading: 0, Installing: 0, Removing: 0, Not Upgrading: 2
+curl installation is complted
+Installing vim
+vim is already the newest version (2:9.1.1230-2).
+Summary:
+  Upgrading: 0, Installing: 0, Removing: 0, Not Upgrading: 2
+vim installation is complted
+Installing wget
+wget is already the newest version (1.25.0-2).
+wget set to manually installed.
+Summary:
+  Upgrading: 0, Installing: 0, Removing: 0, Not Upgrading: 2
+wget installation is complted
+**All packages are processed**
+
