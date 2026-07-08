@@ -1,0 +1,39 @@
+Check Package Availability 
+
+Instead of installing, verify if packages exist.
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#!/bin/bash
+
+for package in git curl vim wget docker
+do
+    if command -v "$package" >/dev/null 2>&1
+    then
+        echo "$package is installed."
+    else
+        echo "$package is NOT installed."
+    fi
+done
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+manthangavali1234@mg-vm-1:~/shellclass/localusers$ vim check_package_availabailty.sh
+manthangavali1234@mg-vm-1:~/shellclass/localusers$ cat check_package_availabailty.sh 
+#!/bin/bash
+
+for package in git curl vim wget docker
+do
+    if command -v "$package" >/dev/null 2>&1
+    then
+        echo "$package is installed."
+    else
+        echo "$package is NOT installed."
+    fi
+done
+manthangavali1234@mg-vm-1:~/shellclass/localusers$ bash check_package_availabailty.sh 
+git is installed.
+curl is installed.
+vim is installed.
+wget is installed.
+docker is NOT installed.
+
+
