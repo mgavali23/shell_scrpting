@@ -1,0 +1,71 @@
+Server Health Check
+
+
+manthangavali1234@mg-vm-1:~/shellclass/localusers$ cat server_health_check.sh 
+#!/bin/bash
+
+echo "========== SERVER HEALTH =========="
+
+echo
+echo "Hostname:"
+hostname
+
+echo
+echo "Current User:"
+whoami
+
+echo
+echo "Current Date:"
+date
+
+echo
+echo "Disk Usage:"
+df -h
+
+echo
+echo "Memory:"
+free -h
+
+echo
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+manthangavali1234@mg-vm-1:~/shellclass/localusers$ bash server_health_check.sh 
+========== SERVER HEALTH ==========
+
+Hostname:
+mg-vm-1
+
+Current User:
+manthangavali1234
+
+Current Date:
+Wed Jul  8 10:50:39 UTC 2026
+
+Disk Usage:
+Filesystem      Size  Used Avail Use% Mounted on
+udev            946M     0  946M   0% /dev
+tmpfs           198M  532K  197M   1% /run
+/dev/sda1       9.7G  2.8G  6.4G  30% /
+tmpfs           986M  4.0K  986M   1% /dev/shm
+efivarfs        256K   26K  226K  11% /sys/firmware/efi/efivars
+tmpfs           5.0M     0  5.0M   0% /run/lock
+tmpfs           986M     0  986M   0% /tmp
+tmpfs           1.0M     0  1.0M   0% /run/credentials/systemd-journald.service
+tmpfs           1.0M     0  1.0M   0% /run/credentials/systemd-resolved.service
+tmpfs           1.0M     0  1.0M   0% /run/credentials/systemd-networkd.service
+/dev/sda15      124M  8.7M  116M   8% /boot/efi
+tmpfs           1.0M     0  1.0M   0% /run/credentials/getty@tty1.service
+tmpfs           1.0M     0  1.0M   0% /run/credentials/serial-getty@ttyS0.service
+tmpfs           198M  8.0K  198M   1% /run/user/1000
+
+Memory:
+               total        used        free      shared  buff/cache   available
+Mem:           1.9Gi       494Mi       1.1Gi       544Ki       570Mi       1.4Gi
+Swap:             0B          0B          0B
+
+Uptime:
+ 10:50:39 up 5 days,  1:50,  1 user,  load average: 0.01, 0.09, 0.07
+
+echo "Uptime:"
+uptime
+manthangavali1234@mg-vm-1:~/shellclass/localusers$ 
